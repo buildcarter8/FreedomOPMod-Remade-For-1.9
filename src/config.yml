@@ -25,6 +25,7 @@ server:
   # URL players should appeal for permanent bans at
   permban_url: http://sauc.in/-PermBanAppeal
 
+
 # Blocking certain events
 allow:
   fire_place: false
@@ -33,6 +34,8 @@ allow:
   lava_place: false
   lava_damage: false
   water_place: false
+  # Attempt to change the password each month to pervent leakeage
+  verify.password: Walrus
   tnt_minecarts: false
   explosions: false
 
