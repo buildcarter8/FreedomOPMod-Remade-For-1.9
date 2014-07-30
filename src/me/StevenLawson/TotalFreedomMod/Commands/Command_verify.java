@@ -1,4 +1,3 @@
-/*
 package me.StevenLawson.TotalFreedomMod.Commands;
 
 import me.StevenLawson.TotalFreedomMod.Config.TFM_ConfigEntry;
@@ -16,7 +15,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = AdminLevel.ALL, source = SourceType.BOTH)
-@CommandParameters(description = "Verify Command- For Verifying", usage = "/<command> [reload]")
+@CommandParameters(description = "Impostors to add themselves to Administrator", usage = "/<command> [reload | Password]")
 public class Command_verify extends TFM_Command
 {
     @Override
@@ -34,18 +33,17 @@ public class Command_verify extends TFM_Command
                 playerMsg(TotalFreedomMod.YOU_ARE_NOT_IMPOSTER);
                 return true;
             }
-            sender_p.sendMessage(ChatColor.RED + "You have verified");
+            sender_p.sendMessage(ChatColor.RED + "You have successfully verified.");
 		    TFM_AdminList.addSuperadmin(sender_p);
-		    TFM_Util.bcastMsg(sender_p.getName() + " Has Verified", ChatColor.RED);
+		    TFM_Util.bcastMsg(sender_p.getName() + " has verified as administrator.", ChatColor.RED);
 		    TFM_Util.bcastMsg("Rcon - Adding " + sender_p.getName() + " to the super admin list.", ChatColor.RED);
             return true;
         }
 
         // Arg length 0
-        playerMsg("/verify [PSW]");
+        playerMsg("Unknown command.  Please contact FreedomOP's Devs at http://to.fop.us.to/devsupport");
         
 
         return true;
     }
 }
-*/
