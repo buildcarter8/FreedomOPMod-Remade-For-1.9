@@ -12,7 +12,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 
 @CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
-@CommandParameters(description = "Toggles TotalFreedomMod settings", usage = "/<command> [option] [value] [value]")
+@CommandParameters(description = "Toggles FreedomOPMod's settings", usage = "/<command> [option] [value] [value]")
 public class Command_toggle extends TFM_Command
 {
     @Override
