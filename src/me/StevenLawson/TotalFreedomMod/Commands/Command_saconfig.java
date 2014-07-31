@@ -14,9 +14,9 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-@CommandPermissions(level = AdminLevel.OP, source = SourceType.BOTH)
+@CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
 @CommandParameters(description = "Manage superadmins.",
-        usage = "/<command> <list | clean | clearme [ip] | <add | delete | info> <username>>")
+        usage = "/<command> <list | clean | clearme [ip] | <add | del | info> <username>>")
 public class Command_saconfig extends TFM_Command
 {
     @Override
@@ -170,7 +170,7 @@ public class Command_saconfig extends TFM_Command
             return true;
         }
 
-        if ("delete".equals(args[0]))
+        if ("del".equals(args[0]))
         {
             if (!TFM_AdminList.isSeniorAdmin(sender))
             {
